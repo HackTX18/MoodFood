@@ -13,7 +13,9 @@
 import urllib3
 import bs4
 import sys
-import certifi
+import certifi  
+
+
 
 http = urllib3.PoolManager(
     cert_reqs = 'CERT_REQUIRED', ca_certs=  certifi.where())
@@ -85,5 +87,7 @@ def get_reviews(url):
         if len(next_page_button) == 0:
             has_next_page = False
         page_num = page_num + 1
+
+
 
     return product_name.strip(), reviews
