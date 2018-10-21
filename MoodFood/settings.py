@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import os.path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,6 +27,7 @@ SECRET_KEY = 'rj#b%90wq7bmskh66-x06nj%bphtnqia=xilwng36!grkvuw#_'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
 
 
 # Application definition
@@ -117,5 +119,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 STATIC_URL = '/static/'
+
+# Additional locations of static files
+STATICFILES_DIRS = (
+	os.path.join(os.path.dirname(__file__),'../App/static/'),
+)

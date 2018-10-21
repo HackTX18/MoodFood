@@ -8,9 +8,10 @@ import App.yelpreviewscraper as YPS
 
 
 def index(request):
-    return render(request, "index.html")
+    return render(request, "header.html")
 
 # Temporary hard-coded site
-SITE = "https://www.yelp.com/biz/mcdonalds-plano-22"
+'''ITE = "https://www.yelp.com/biz/mcdonalds-plano-22"
 REVIEWSTRING = YPS.get_reviews(SITE)
 print(REVIEWSTRING)
+'''
