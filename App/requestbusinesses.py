@@ -39,7 +39,7 @@ except ImportError:
 
 config = configparser.ConfigParser()
 #os.chdir('..')
-config.read('../config/config.ini')
+config.read('config/config.ini')
 
 # Yelp Fusion no longer uses OAuth as of December 7, 2017.
 # You no longer need to provide Client ID to fetch Data
@@ -183,6 +183,8 @@ def main():
                 error.read(),
             )
         )
+
+    print("testerino")
 
 
 if __name__ == '__main__':
